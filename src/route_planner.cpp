@@ -63,7 +63,7 @@ float Compare(RouteModel::Node* a, RouteModel::Node* b) {
 RouteModel::Node *RoutePlanner::NextNode() {
  sort(this->open_list.begin(), this->open_list.end(), Compare);
     RouteModel::Node* next = open_list.back();
-
+    this->open_list.push_back();
     return next;
  
 
